@@ -1,7 +1,7 @@
 export default function Dashboard() {
   return (
-    <>
-      <h1 style={{ textAlign: "center" }}>This is the dashboard page.</h1>
-    </>
+    <div className="container">
+      <h1>This is the dashboard page.</h1>
+    </div>
   );
 }

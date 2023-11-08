@@ -1,7 +1,7 @@
 export default function Settings() {
   return (
-    <>
-      <h1 style={{ textAlign: "center" }}>This is settings page.</h1>
-    </>
+    <div className="container">
+      <h1>This is settings page.</h1>
+    </div>
   );
 }
