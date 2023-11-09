@@ -75,3 +75,15 @@ section.blogs {
   margin-top: 2px;
   cursor: pointer;
 }
+.team_analytics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  gap: 10px;
+  margin-top: 10px;
+}
+.parallex {
+  padding: 10px;
+  background-color: #1b1b1b;
+  border-radius: 4px;
+}

@@ -1,7 +1,7 @@
 export default function Dashboard() {
   return (
     <div className="container">
-      <h1>This is the dashboard page.</h1>
+      <h1>This is the dashboard page (parallel routes).</h1>
     </div>
   );
 }
