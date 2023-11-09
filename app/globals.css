@@ -47,3 +47,20 @@ footer {
 footer > a {
   color: var(--color);
 }
+section.blogs {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+.blogs > article {
+  padding: 10px;
+  background-color: #2c2c2c;
+  border-radius: 7px;
+}
+.blogs > article > a {
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+.blog > h1 {
+  color: var(--primary);
+}

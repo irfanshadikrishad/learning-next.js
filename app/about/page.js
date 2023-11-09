@@ -12,7 +12,7 @@ export default function About() {
           router.push("/dashboard");
         }}
       >
-        dashboard
+        router.push(/dashboard)
       </button>
     </div>
   );

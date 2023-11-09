@@ -1,7 +1,12 @@
-export default function Slug({ params }) {
+export default async function Slug({ params }) {
+  const req = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${params.slug}`
+  );
+  const res = await req.json();
   return (
-    <section className="container">
-      <h1>{params.slug}</h1>
+    <section className="container blog">
+      <h1>{res.title}</h1>
+      <p>{res.body}</p>
     </section>
   );
 }
