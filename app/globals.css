@@ -1,10 +1,15 @@
+:root {
+  --color: #f5f5f5;
+  --background: #252525;
+  --primary: palegreen;
+}
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  color: #f5f5f5;
-  background-color: #252525;
+  color: var(--color);
+  background-color: var(--background);
 }
 nav {
   padding: 1.2rem 0;
@@ -20,5 +25,25 @@ nav {
 .navigations > a {
   text-decoration: none;
   cursor: pointer;
-  color: #f5f5f5;
+  color: var(--color);
+}
+.active {
+  color: var(--primary) !important;
+}
+.dashboard_btn {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 4px;
+  color: var(--background);
+  font-size: 1rem;
+  font-style: italic;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 5px 15px;
+}
+footer {
+  padding-top: 3rem;
+}
+footer > a {
+  color: var(--color);
 }
