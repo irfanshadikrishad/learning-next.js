@@ -31,7 +31,7 @@
 
 #### Styling
 
-- ~~css modules~~
+- ~~css modules~~ `ec68fcc`
 - tailwind css
 - css in js
 - sass
