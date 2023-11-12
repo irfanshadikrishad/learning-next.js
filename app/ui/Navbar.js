@@ -6,7 +6,7 @@ export default function Navbar() {
   const pathname = usePathname();
   return (
     <nav>
-      <div className="container">
+      <div className="containor">
         <div className="navigations">
           <Link className={pathname === "/" ? "active" : ""} href="/">
             Home

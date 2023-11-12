@@ -5,7 +5,7 @@ export default async function Blog() {
   let res = await req.json();
   res = res.slice(0, 5);
   return (
-    <div className="container">
+    <div className="containor">
       <section className="blogs">
         {res.map((blog, index) => {
           return (

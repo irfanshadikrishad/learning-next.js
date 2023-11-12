@@ -4,7 +4,7 @@ export default async function Slug({ params }) {
   );
   const res = await req.json();
   return (
-    <section className="container blog">
+    <section className="containor blog">
       <h1>{res.title}</h1>
       <p>{res.body}</p>
     </section>

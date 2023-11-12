@@ -8,13 +8,13 @@
   padding: 0;
 }
 body {
-  color: var(--color);
-  background-color: var(--background);
+  color: var(--color) !important;
+  background-color: var(--background) !important;
 }
 nav {
   padding: 1.2rem 0;
 }
-.container {
+.containor {
   width: 50%;
   margin: 0 auto;
 }
@@ -45,7 +45,7 @@ footer {
   padding-top: 3rem;
 }
 footer > a {
-  color: var(--color);
+  color: var(--primary);
 }
 section.blogs {
   display: grid;
