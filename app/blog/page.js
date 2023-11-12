@@ -1,7 +1,10 @@
 import Link from "next/link";
 
 export default async function Blog() {
-  const req = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const req = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    next: { revalidate: 3600 }, // time-based revalidate (per sec.)
+    cache: "force-cache",
+  });
   let res = await req.json();
   res = res.slice(0, 5);
   return (
