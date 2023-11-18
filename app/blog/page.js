@@ -1,24 +1,58 @@
+"use client";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { FiEdit } from "react-icons/fi";
+import { TiDeleteOutline } from "react-icons/ti";
 
-export default async function Blog() {
-  const req = await fetch("https://jsonplaceholder.typicode.com/posts", {
-    next: { revalidate: 3600 }, // time-based revalidate (per sec.)
-    cache: "force-cache",
-  });
-  let res = await req.json();
-  res = res.slice(0, 5);
+// blog fetching
+export default function Blog() {
+  const [bloog, setBloog] = useState([]);
+  async function blogs() {
+    const res = await fetch("http://localhost:3000/api/blog", {
+      cache: "no-store",
+    });
+    const data = await res.json();
+    setBloog(data);
+  }
+  // delete
+  const deleteIt = async (ID) => {
+    const req = await fetch("http://localhost:3000/api/blog", {
+      method: "DELETE",
+      body: JSON.stringify({ ID }),
+    });
+    const res = await req.json();
+    if (req.status === 200) {
+      await blogs();
+      console.log(res.success, ID);
+    } else {
+      console.log(res.error);
+    }
+  };
+  useEffect(() => {
+    blogs();
+  }, [setBloog]);
   return (
     <div className="containor">
-      <section className="blogs">
-        {res.map((blog, index) => {
+      <div className="blogs">
+        {bloog.map((blog, i) => {
           return (
-            <article key={index}>
-              <Link href={`/blog/${blog.id}`}>{blog.title}</Link>
+            <article key={i}>
+              <h1>{blog.title}</h1>
               <p>{blog.body}</p>
+              <div className="article_actions">
+                <Link href={`/edit/${blog._id}`}>{<FiEdit />}</Link>
+                <button
+                  onClick={() => {
+                    deleteIt(String(blog._id));
+                  }}
+                >
+                  {<TiDeleteOutline />}
+                </button>
+              </div>
             </article>
           );
         })}
-      </section>
+      </div>
     </div>
   );
 }

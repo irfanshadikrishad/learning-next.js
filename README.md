@@ -16,7 +16,7 @@
 
 #### Data Fetching
 
-- fetching, caching, and revalidating
+- ~~fetching, caching, and revalidating~~ `a3bedf0`
 - data fetching patterns
 - forms and mutations
 
@@ -32,7 +32,7 @@
 #### Styling
 
 - ~~css modules~~ `ec68fcc`
-- tailwind css
+- ~~tailwind css~~ `3a1af90`
 - css in js
 - sass
 

@@ -1,13 +1,12 @@
 import { Inter } from "next/font/google";
-import "./globals.css"; // Global CSS
-import Navbar from "./ui/Navbar";
-import Footer from "./ui/Footer";
+import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "learning-next.js",
-  description: "irfanshadikrishad/learning-next.js",
+  title: "Next",
+  description: "developed by @irfanshadikrishad",
 };
 
 export default function RootLayout({ children }) {
@@ -16,7 +15,6 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );

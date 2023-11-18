@@ -7,21 +7,18 @@ export default function Navbar() {
   return (
     <nav>
       <div className="containor">
-        <div className="navigations">
+        <div className="navBtns">
           <Link className={pathname === "/" ? "active" : ""} href="/">
             Home
           </Link>
           <Link className={pathname === "/blog" ? "active" : ""} href="/blog">
             Blog
           </Link>
-          <Link className={pathname === "/about" ? "active" : ""} href="/about">
-            About
-          </Link>
           <Link
-            className={pathname === "/contact" ? "active" : ""}
-            href="/contact"
+            className={pathname === "/create" ? "active" : ""}
+            href="/create"
           >
-            Contact
+            Create
           </Link>
         </div>
       </div>

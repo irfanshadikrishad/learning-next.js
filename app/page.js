@@ -1,9 +1,7 @@
-import home from "./home.module.css"; // css module
-
-export default function Home() {
+export default function Homemade_Apple() {
   return (
-    <div className={home.container}>
-      <h1>Hello, Next.js!</h1>
+    <div className="containor">
+      <h1>Home</h1>
     </div>
   );
 }
