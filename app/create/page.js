@@ -34,7 +34,7 @@ export default function Create() {
   // submit
   const submit = async (e) => {
     e.preventDefault();
-    const req = await fetch("http://localhost:3000/api/blog", {
+    const req = await fetch("/api/blog", {
       method: "POST",
       body: JSON.stringify({ title, body }),
     });
