@@ -69,3 +69,7 @@
 - codemods
 - app router migration
 - migrating from vite
+
+#### CRUD => Create, Read, Update & Delete
+
+- ~~api/crud/1~~ `44a755c`

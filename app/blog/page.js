@@ -8,7 +8,7 @@ import { TiDeleteOutline } from "react-icons/ti";
 export default function Blog() {
   const [bloog, setBloog] = useState([]);
   async function blogs() {
-    const res = await fetch("http://localhost:3000/api/blog", {
+    const res = await fetch("/api/blog", {
       cache: "no-store",
     });
     const data = await res.json();
@@ -16,7 +16,7 @@ export default function Blog() {
   }
   // delete
   const deleteIt = async (ID) => {
-    const req = await fetch("http://localhost:3000/api/blog", {
+    const req = await fetch("/api/blog", {
       method: "DELETE",
       body: JSON.stringify({ ID }),
     });
