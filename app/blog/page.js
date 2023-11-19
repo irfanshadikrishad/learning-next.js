@@ -37,8 +37,16 @@ export default function Blog() {
         {bloog.map((blog, i) => {
           return (
             <article key={i}>
-              <h1>{blog.title}</h1>
-              <p>{blog.body}</p>
+              <h1>
+                {blog.title.length > 14
+                  ? blog.title.slice(0, 14) + "..."
+                  : blog.title}
+              </h1>
+              <p>
+                {blog.body.length > 85
+                  ? blog.body.slice(0, 85) + "..."
+                  : blog.body}
+              </p>
               <div className="article_actions">
                 <Link href={`/edit/${blog._id}`}>{<FiEdit />}</Link>
                 <button

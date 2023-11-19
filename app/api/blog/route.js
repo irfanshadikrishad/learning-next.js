@@ -33,3 +33,16 @@ export async function DELETE(request) {
     return NextResponse.json({ error: error.message }, { status: 400 });
   }
 }
+
+export async function PATCH(request) {
+  try {
+    const { id, title, body } = await request.json();
+    const blog = await Blog.findByIdAndUpdate(id, { title, body });
+    return NextResponse.json(
+      { success: `updated ${blog._id}` },
+      { status: 200 }
+    );
+  } catch (error) {
+    return NextResponse.json({ error: error.message }, { status: 400 });
+  }
+}
