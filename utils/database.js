@@ -1,18 +1,14 @@
-import dotenv from "dotenv";
+import chalk from "chalk";
+import { config } from "dotenv";
 import { connect } from "mongoose";
-dotenv.config();
+config();
 
 const database = async () => {
   try {
-    await connect(process.env.URI)
-      .then(() => {
-        console.log(`[database] connected`);
-      })
-      .catch((error) => {
-        console.log(`[database] ${error.message}`);
-      });
+    await connect(process.env.URI);
+    console.log(chalk.cyan(`[database] connected`));
   } catch (error) {
-    console.log(`[database] ${error.message}`);
+    console.log(chalk.magenta(`[database] ${error.message}`));
   }
 };
 

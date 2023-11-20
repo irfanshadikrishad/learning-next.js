@@ -11,14 +11,14 @@ export default function Navbar() {
           <Link className={pathname === "/" ? "active" : ""} href="/">
             Home
           </Link>
-          <Link className={pathname === "/blog" ? "active" : ""} href="/blog">
-            Blog
+          <Link className={pathname === "/login" ? "active" : ""} href="/login">
+            Login
           </Link>
           <Link
-            className={pathname === "/create" ? "active" : ""}
-            href="/create"
+            className={pathname === "/register" ? "active" : ""}
+            href="/register"
           >
-            Create
+            Register
           </Link>
         </div>
       </div>
